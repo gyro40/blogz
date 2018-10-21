@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+    <head>
+        <title>{{title}}</title>
+        <style>
+            .error {
+                color: red;
+            }
+            div {
+                display:inline-block;
+                padding: 6px;
+                margin: 0 auto;
+            }
+        </style>
+    </head>
+
+    <nav>
+        <ul>
+            <li><a href='/'>Blog Feed</a></li>
+            <li><a href="/new_post_form">New Post</a></li>
+        </ul>
+    </nav>
+
+<body>
+
+    {% block content %}
+    {% endblock %}
+
+</body>
+
+</html> 
