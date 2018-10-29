@@ -1,9 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>New Blog Post!</h1>
-    <form action='/' method='POST'>
-        <label> 
+
+    <h1>New Post!</h1>
+    <form action='/blog' method='POST'>
+        <label>
             New Blog Title:
         <input type='text' name='blog_title' value="{{blog_title}}"/>
         <span class="error">{{blog_title_error}}</span>

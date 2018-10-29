@@ -2,16 +2,28 @@
 
 {% block content %}
 
+
+    {% if blogs|length == 0 %}
+    
+    <h2>No Blogs Yet!</h2>
+    
+    {% else %}
+    
     <ul>
         {% for blog in blogs %}
             <h2>
-                <a href="./all_posts?id={{blog.id}}">{{blog.blog_title}}</a>
+                <a href="./blog_post?id={{blog.id}}">{{blog.blog_title}}</a>
             </h2>
             <p>
                 {{blog.blog_content}}
             </p>
+            <p>
+               Written by: <a href="./blog?user_id={{blog.owner_id}}">{{blog.owner_username}}</a>
+            </p>
             <hr />
         {% endfor %}
     </ul>
+
+    {% endif %}
 
 {% endblock %}
